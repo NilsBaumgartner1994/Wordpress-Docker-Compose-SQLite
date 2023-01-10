@@ -19,7 +19,7 @@ services:
     volumes:
       - ./data/wordpress:/var/www/html/${DOMAIN_PATH}:rw
       - ./plugin-wp-sqlite-db/db.php:/var/www/html/${DOMAIN_PATH}/wp-content/db.php:ro
-      - ./db.sqlite:/var/www/html/${DOMAIN_PATH}/wp-content/.ht.sqlite
+      - ./data/db.sqlite:/var/www/html/${DOMAIN_PATH}/wp-content/.ht.sqlite
     networks:
       - topDomainProxy
 
